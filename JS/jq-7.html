@@ -1,0 +1,33 @@
+<h1>Heading 1</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vel provident, sed dolorum rerum aperiam sequi
+    quae adipisci totam omnis numquam hic blanditiis iure quis ad molestias animi impedit dolores.</p>
+
+<h1>Heading 2</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vel provident, sed dolorum rerum aperiam sequi
+    quae adipisci totam omnis numquam hic blanditiis iure quis ad molestias animi impedit dolores.</p>
+
+<h1>Heading 3</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vel provident, sed dolorum rerum aperiam sequi
+    quae adipisci totam omnis numquam hic blanditiis iure quis ad molestias animi impedit dolores.</p>
+
+<style>
+    h1,
+    p {
+        border: solid;
+        padding: 20px;
+        width: 400px;
+        margin: auto;
+    }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    // jquery accordion
+    $("p").hide();
+    $("p:first").show();
+    $("h1").click(function () {
+        $("p").slideUp();
+        $(this).next().slideDown();
+    });
+</script>

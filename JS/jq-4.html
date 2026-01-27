@@ -1,0 +1,20 @@
+<h1>hello</h1>
+<h1>hello</h1>
+<h1>hello</h1>
+<h1>hello</h1>
+<h1>hello</h1>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    // jquery loop
+    $("h1").each(function() {
+        console.log($(this));
+        $(this).css("border","solid").text(Math.random())
+    });
+
+    let arr = [10,20,30,40]
+    $.each(arr, function(i,val){
+        console.log(i,val);
+    });
+</script>

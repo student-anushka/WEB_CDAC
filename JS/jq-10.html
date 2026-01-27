@@ -1,0 +1,24 @@
+<input type="text" id="x1" placeholder="username" /> <br>
+<input type="text" id="x2" placeholder="password" /> <br>
+<button>GET DATA</button>
+<div>..........</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    $("button").click(function () {
+        let data1 = $("#x1").val();
+        let data2 = $("#x2").val();
+        if (data1 != "" && data2 != "") {
+            const API = 'https://fakestoreapi.com/auth/login';
+            const data = { username: data1, password: data2 }
+            $.post(API, data, function (response) {
+                console.log(response);
+            })
+        }
+    })
+</script>
+
+<!-- 
+https://fakestoreapi.com/users
+ -->  

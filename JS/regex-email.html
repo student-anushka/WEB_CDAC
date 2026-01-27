@@ -1,0 +1,14 @@
+<script>
+    let email = 'ac@ca.com';
+    let regexEmail = /^([A-z0-9_\.]+)@([A-z0-9\-]+)\.([A-z]{2,})$/;
+    let result = regexEmail.test(email);
+    console.log(result);
+
+    let password = 'Mn5$';
+    let regexPassword = /^(?=.*[a-z])(?=.*[\d])(?=.*[A-Z])(?=.*[@#\{\-\^\$}]).{4,8}$/;
+    let result1 = regexPassword.test(password);
+    console.log(result1);
+</script>
+
+<script src="async-await.html"></script> 
+

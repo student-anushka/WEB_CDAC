@@ -1,0 +1,20 @@
+<ul>
+    <li>test data</li>
+    <li>test data</li>
+    <li id="x1">test data</li>
+    <li>test data</li>
+    <li>test data</li>
+    <li>test data</li>
+</ul>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    //jquery traverse function
+    $("#x1").click(function() {
+          $(this).css('background','#456')
+          $(this).next().css('font-size','40px')
+          $(this).prev().css('font-size', '60px')
+          $(this).parent().css('border', 'solid')
+    });
+</script>

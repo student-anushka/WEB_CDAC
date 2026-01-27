@@ -1,0 +1,14 @@
+<button>Enter</button>
+<p style="border: solid; width: 100px; height: 100px;"></p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    //jquery animation
+    $("button").click(function () {
+        $("p").animate({
+            'margin-left': '100px',
+            'width': '300px',
+            'border-radius': '10px'
+        }, 1000);
+    });
+</script>

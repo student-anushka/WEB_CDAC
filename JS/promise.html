@@ -1,0 +1,17 @@
+<script>
+    let promiseObject = new Promise((res,rej) => {
+      res({ msg: 'api called', status:200})
+      // rej({msg:'api failed', status:401})
+    });
+    console.log(promiseObject);
+</script>
+
+<!-- Promise its an object used to handle asynchronous operation  
+1 - pending = no task is initiated
+2 - fulfilled = task is completed with result
+3 - rejected = task is completed with error
+
+then() - api data 
+catch() - api failed
+finally() - promise is completed
+-->

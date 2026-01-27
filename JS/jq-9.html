@@ -1,0 +1,41 @@
+<button>GET DATA</button>
+<input type="text" id="x1" placeholder="userid" />
+<div>........</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    $("button").click(function () {
+        let data = $("#x1").val();
+        if (data != "") {
+            const API = `https://fakestoreapi.com/products/category/${data}`;
+            $.ajax({
+                type: "get",
+                url: API,
+                success: function (response) {
+                    console.log(response);
+                    if (response.length > 0) {
+                        $("div").empty();
+                        $.each(response, function (i, val) {
+                            $("div").append(`
+                               <div>
+                                   <img src = "${val.image}" />
+                                   <h2>${val.price}</h2>
+                                </div>
+                           `)
+                        })
+                    }
+                },
+                error: function (err) {
+                    console.log(err);
+                },
+            })
+        }
+    })
+</script>
+
+<!-- 
+https://fakestoreapi.com/products
+https://fakestoreapi.com/products/categories
+https://fakestoreapi.com/products/category/electronics
+ -->

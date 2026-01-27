@@ -1,0 +1,22 @@
+<button>GET DATA</button>
+<input type="text" id="x1" placeholder="userid" />
+<div>........</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    $("button").click(function () {
+        let data = $("#x1").val();
+        if (data != "") {
+            const API = `https://jsonplaceholder.typicode.com/users/${data}`;
+            $.get(API, function (response) {
+                console.log(response);
+                $("div").empty();
+                $("div").append(`
+                   <h2>${response.name}</h2>
+                   <p>${response.phone}</p>
+                `);
+            })
+        }
+    });
+</script>

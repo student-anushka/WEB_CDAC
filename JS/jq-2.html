@@ -1,0 +1,19 @@
+<button>Enter</button>
+<p>test1</p>
+<p>test2</p>
+<p>test3</p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+<script>
+    // jquery event, jquery selector, jquery filter, jquery effects
+
+    //document.querySelector('button')
+    $('button').click(function () {
+        $("p").css('background', '#ac1').width(100).height(50);
+        $("p:first").text('hello world');
+        $("p:last").text('hello <i>world</i>');
+        $("p:eq(1)").html('hello <i>world</i>');
+    });
+</script>

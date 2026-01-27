@@ -1,0 +1,22 @@
+<script>
+    let brands = ['nike', 'puma', 'adidas'];
+    console.log(brands);
+    console.log(brands.length);
+    console.log(brands[0]);
+    console.log(brands[1]);
+    console.log(brands[3]);
+
+    // use 'let' for restriction - inside the block scope only
+    // val & i initialized at the time of runtime for()
+    for (let val of brands) {
+        console.log(val);
+        document.write(`
+             <li><input type = "checkbox" /> ${val} </li>
+        `);
+    }
+
+    for (let i in brands) {
+        console.log(i, brands[i]);
+    }
+
+</script>
